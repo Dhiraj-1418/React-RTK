@@ -70,6 +70,13 @@ Your app should now be running at http://localhost:5173/ (or as per your dev ser
 
 🖼 Preview
 
+
+
+https://github.com/user-attachments/assets/fe2f70bf-9104-4053-9c5d-b3e71600bc3f
+
+
+
+
 📚 Learn More
 If you’re new to Redux Toolkit, check out:
 
