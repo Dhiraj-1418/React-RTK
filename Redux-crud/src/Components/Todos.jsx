@@ -83,11 +83,7 @@ function TodoComponent() {
                 className="btn m-2 btn-sm btn-primary"
                 onClick={() =>
                   dispatch(
-                    update({
-                      index: i,
-                      title: "updated title",
-                      status: true,
-                    })
+                    update({ index: i, title: "updated title", status: true })
                   )
                 }
               >

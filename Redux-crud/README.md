@@ -1,97 +1,87 @@
+# 📝 Redux Toolkit Todo App
 
-# 📝 Redux Toolkit Todo App (CRUD) with Bootstrap UI
-
-[![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)](https://redux-toolkit.js.org/)  
-[![React](https://img.shields.io/badge/React-17%2B-blue.svg?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)  
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple.svg?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)  
-
-A **modern and responsive** Todo Application built using **React, Redux Toolkit, and Bootstrap 5**.  
-Supports **full CRUD operations** with a clean, minimal UI.
-
-
-
-## ✨ Features
-- ➕ **Add Todo**
-- 🖊 **Update Todo**
-- ❌ **Delete Todo**
-- ✅ **Mark Complete / Incomplete**
-- 🎨 **Beautiful Bootstrap UI**
-- ⚡ **State Management with Redux Toolkit**
+A simple yet powerful **Todo application** built with **React** and **Redux Toolkit**.  
+This project demonstrates **CRUD (Create, Read, Update, Delete)** operations using Redux Toolkit for efficient and scalable state management.
 
 ---
 
-## 🏗 Redux Toolkit Flow
+## 🚀 Features
 
-`
+- ➕ **Add new todos**
+- ✏ **Edit existing todos**
+- ✅ **Mark todos as completed**
+- ❌ **Delete todos**
+- 📦 Centralized state management with Redux Toolkit
+- 🧹 Clean and maintainable code structure
 
-┌───────────────┐
-│   Component   │  dispatch(action)
-└───────┬───────┘
-│
-▼
-┌────────────────┐
-│   Reducer /    │  ← createSlice()
-│   Slice Logic  │
-└───────┬────────┘
-│
-▼
-┌────────────────┐
-│ Redux Store    │  ← configureStore()
-└───────┬────────┘
-│
-▼
-┌────────────────┐
-│   UI Updates   │  ← useSelector()
-└────────────────┘
+---
 
+## 🛠️ Tech Stack
 
+- **React** – Frontend framework
+- **Redux Toolkit** – State management
+- **React-Redux** – Connecting Redux with React
+- **CSS** – Styling the UI
+- **Vite / CRA** – Development environment (based on your setup)
 
-
-##Video
-
-https://drive.google.com/file/d/1KOMp7FIWmMkLTdERz_gV5NbZWWWAZagZ/view?usp=sharing
 ---
 
 ## 📂 Project Structure
 
+Redux-crud/
+│
+├── src/
+│ ├── app/
+│ │ └── store.js # Redux store setup
+│ ├── features/
+│ │ └── todo/
+│ │ ├── todoSlice.js # Todo slice (reducers & actions)
+│ │ └── Todo.js # Todo list UI
+│ ├── App.js
+│ └── main.js
+│
+└── package.json
 
-src/
-│── Store/
-│   └── store.js
-│── features/
-│   └── todoSlice.js
-│── components/
-│   └── Todos.jsx
-│── App.js
-└── index.js
-
-
-
-
-
-
----
-
-## 🛠 Tech Stack
-
-* **React** – UI Library
-* **Redux Toolkit** – State Management
-* **Bootstrap 5** – UI Styling
+yaml
+Copy
+Edit
 
 ---
 
-## 📚 Learning Resources
+## 📦 Installation & Usage
 
-* [Redux Toolkit Docs](https://redux-toolkit.js.org/)
-* [React Docs](https://react.dev/)
-* [Bootstrap Docs](https://getbootstrap.com/)
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Dhiraj-1418/React-RTK.git
+   cd Redux-crud
+Install dependencies
+
+bash
+Copy
+Edit
+npm install
+Run the app
+
+bash
+Copy
+Edit
+npm run dev
+Your app should now be running at http://localhost:5173/ (or as per your dev server config).
+
+🖼 Preview
+
+📚 Learn More
+If you’re new to Redux Toolkit, check out:
+
+Redux Toolkit Documentation
+
+React Redux Documentation
+
+📜 License
+This project is open-source and available under the MIT License.
+
+yaml
+Copy
+Edit
 
 ---
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
----
-
-💡 *Simple, fast, and beautiful Todo app — built with Redux Toolkit & Bootstrap*
