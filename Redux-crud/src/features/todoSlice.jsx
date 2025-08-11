@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: [{ title: "learn Redux", status: true }],
+  value: [{ id: 1, title: "learn Redux", status: true }],
 };
 
 const todoSlice = createSlice({
@@ -10,6 +10,7 @@ const todoSlice = createSlice({
   reducers: {
     add: (state, action) => {
       state.value.push({
+        id: action.payload,
         title: action.payload,
         status: false,
       });

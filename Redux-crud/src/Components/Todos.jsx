@@ -16,19 +16,30 @@ function TodoComponent() {
   };
 
   const handleUpdateTodo = (index, status) => {
-    dispatch(update({ index, title: input || todos[index].title, status }));
-    setInput("");
+    dispatch(update({ index, title: input ||   todos[index].title, status }));
+   
+
   };
+
+
+  function updateTitleOfTodo (index){
+
+
+ setInput(todos[index].title)
+
+
+  }
+
 
   return (
     <div className="container mt-5">
-      <h2 className="text-center mb-4 text-primary">📋 Todo List</h2>
+      <h2 className="text-center mb-4 ">Todo List</h2>
 
       <div className="input-group mb-4 shadow-sm">
         <input
           type="text"
           className="form-control"
-          placeholder="Enter your todo..."
+          placeholder="Add Todo.."
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
@@ -37,14 +48,16 @@ function TodoComponent() {
           type="button"
           onClick={handleAddTodo}
         >
-          Add Todo
+          +
         </button>
       </div>
 
       <ul className="list-group shadow-sm">
         {todos.length === 0 && (
           <li className="list-group-item text-muted text-center">
-            No todos yet. Add one above!
+            Hii ! Glad To See You,
+            Start Your day with me,
+            Add your Tasks
           </li>
         )}
         {todos.map((item, i) => (
@@ -53,6 +66,7 @@ function TodoComponent() {
             className="list-group-item d-flex justify-content-between align-items-center"
           >
             <div>
+              <span className="badge bg-primary m-2">{i+1}</span>
               <strong className={item.status ? "text-success" : "text-danger"}>
                 {item.title}
               </strong>
@@ -69,7 +83,7 @@ function TodoComponent() {
             <div>
               <button
                 className="btn btn-sm btn-primary me-2"
-                onClick={() => handleUpdateTodo(i, !item.status)}
+                onClick={() => handleUpdateTodo(i, !item.status,item.title)}
               >
                 {item.status ? "Complete" : "Pending"}
               </button>
@@ -81,11 +95,7 @@ function TodoComponent() {
               </button>
               <button
                 className="btn m-2 btn-sm btn-primary"
-                onClick={() =>
-                  dispatch(
-                    update({ index: i, title: "updated title", status: true })
-                  )
-                }
+                onClick={() => updateTitleOfTodo(i,item.title)}
               >
                 Edit
               </button>
