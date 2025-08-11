@@ -56,22 +56,42 @@ function TodoComponent() {
               <strong className={item.status ? "text-success" : "text-danger"}>
                 {item.title}
               </strong>
-              <span className="badge bg-secondary ms-2">
+              <span
+                className={
+                  item.status
+                    ? "badge bg-success m-2 p-2"
+                    : "badge bg-danger m-2 p-2"
+                }
+              >
                 {item.status ? "Completed" : "Incomplete"}
               </span>
             </div>
             <div>
               <button
-                className="btn btn-sm btn-warning me-2"
+                className="btn btn-sm btn-primary me-2"
                 onClick={() => handleUpdateTodo(i, !item.status)}
               >
                 {item.status ? "Complete" : "Pending"}
               </button>
               <button
-                className="btn btn-sm btn-danger"
+                className="btn btn-sm btn-primary"
                 onClick={() => dispatch(remove(i))}
               >
                 Remove
+              </button>
+              <button
+                className="btn m-2 btn-sm btn-primary"
+                onClick={() =>
+                  dispatch(
+                    update({
+                      index: i,
+                      title: "updated title",
+                      status: true,
+                    })
+                  )
+                }
+              >
+                Edit
               </button>
             </div>
           </li>
